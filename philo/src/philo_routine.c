@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo_routine.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpeinado <victor@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 10:12:39 by vpeinado          #+#    #+#             */
-/*   Updated: 2024/02/18 01:35:31 by vpeinado         ###   ########.fr       */
+/*   Updated: 2024/03/16 12:31:02 by vpeinado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,6 @@ void	*philo_routine(void *ptr)
 		write_msg(philo, THINK);
 		if (philo->data->nbr_philos % 2 != 0)
 			ft_usleep(philo, philo->data->time_to_eat);
-	}	
+	}
 	return (0);
 }

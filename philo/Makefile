@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vpeinado <victor@student.42.fr>            +#+  +:+       +#+         #
+#    By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 15:50:56 by vpeinado          #+#    #+#              #
-#    Updated: 2024/02/17 14:23:02 by vpeinado         ###   ########.fr        #
+#    Updated: 2024/03/19 18:44:45 by vpeinado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CC		= gcc
 CFLAGS	= -Werror -Wextra -Wall
 #CFLAGS	+= -g3 -fsanitize=thread
 CFLAGS	+= -g3 -fsanitize=address
+RM		= rm -f
 
 #Includes
 INC			=	-I ./includes/
@@ -39,11 +40,11 @@ OBJS = $(addprefix $(OBJ_PATH), $(OBJ))
 
 all: $(NAME)
 
+obj:
+	@mkdir -p $(OBJ_PATH)
+
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c | $(OBJ_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
-
-$(OBJ_PATH):
-	@mkdir -p $(OBJ_PATH)
 
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(INC)
@@ -51,11 +52,11 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo "\033[1;33mObject files: \033[31mDeleted!\033[0;0m"
-	@rm -rf $(OBJ_PATH)
+	@$(RM) -Rf $(OBJ_PATH)
 
 fclean: clean
 	@echo "\033[1;33mPhilosophers: \033[31mDeleted!\033[0;0m"
-	@rm -f $(NAME)
+	@$(RM) -f $(NAME)
 
 re: fclean all
 

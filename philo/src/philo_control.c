@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo_control.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpeinado <victor@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:32:11 by vpeinado          #+#    #+#             */
-/*   Updated: 2024/02/18 00:16:28 by vpeinado         ###   ########.fr       */
+/*   Updated: 2024/03/16 12:30:40 by vpeinado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	control_dinner(t_data *data)
 
 	continue_flag = 1;
 	while (continue_flag)
-	{	
+	{
 		i = 0;
 		data->philos_satisfied = 0;
 		while (i < data->nbr_philos)
