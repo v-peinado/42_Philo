@@ -6,7 +6,7 @@
 #    By: vpeinado <vpeinado@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/12 15:50:56 by vpeinado          #+#    #+#              #
-#    Updated: 2024/03/19 18:44:45 by vpeinado         ###   ########.fr        #
+#    Updated: 2024/03/19 20:01:57 by vpeinado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,8 @@ NAME	= philo
 #Compiler
 CC		= gcc
 CFLAGS	= -Werror -Wextra -Wall
-#CFLAGS	+= -g3 -fsanitize=thread
-CFLAGS	+= -g3 -fsanitize=address
+CFLAGS	+= -g3 -fsanitize=thread
+#CFLAGS	+= -g3 -fsanitize=address
 RM		= rm -f
 
 #Includes
